@@ -42,3 +42,29 @@ footer{
         clear:both;
     }
 }
+
+/* 1025px以上 */
+@media screen and (min-width:1025px){
+    #main{
+        max-width: 1024px; /* 最長の幅を設定 */
+        margin: auto; /* 中央揃え */
+    }
+    section{
+        width: calc(70% - 20px); /* paddingを抜いて70%の幅とする */
+        float:left;/* 左側に置く */
+    }
+    #side{
+        widt: calc(1024px - 718px); /* #mainの幅を引いて幅を決定 */
+        float:left; /* #mainの右に回り込む */
+    }
+    aside{
+        width: calc(100%- 20px); /* paddingを考慮して幅を決める */
+    }
+    #main:after{
+        /* footerを下に回り込ませる */
+        /* clearfix */
+        content:"";
+        display:block;
+        clear:both;
+    }
+}
